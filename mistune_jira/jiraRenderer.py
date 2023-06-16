@@ -116,7 +116,7 @@ class JiraRenderer(BaseRenderer):
         info = attrs.get('info')
         try:
             lang = info.split()[0]
-        except IndexError:
+        except (IndexError, AttributeError):
             langstr = ""
         else:
             if lang not in ("actionscript", "ada", "applescript", "bash", "c", "c#", "c++", "css", "erlang", "go", "groovy",

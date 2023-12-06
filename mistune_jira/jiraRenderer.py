@@ -68,6 +68,10 @@ class JiraRenderer(BaseRenderer):
     def strong(self, token, state):
 
         return "*{}*".format(self.render_children(token, state))
+    
+    def image(self, token, state):
+
+        return "!{}!".format(self.render_children(token, state))
 
     def linebreak(self, token, state):
 
